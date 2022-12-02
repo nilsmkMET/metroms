@@ -54,10 +54,7 @@ fi
 export ROMS_APPLICATION=$1
 # export roms_ver="roms-3.6"
 export roms_ver="roms-3.6clean"
-#export roms_ver="roms-3.9"
 #export roms_ver="roms-trunk820"
-#export roms_ver="roms-trunk1041"
-#export roms_ver="roms_svn"
 #
 # Default settings:
 export USE_MPI=on
@@ -119,13 +116,8 @@ fi
 export MY_ROMS_SRC=${METROMS_BLDDIR}/roms_src
 mkdir -p ${MY_ROMS_SRC}
 cd ${MY_ROMS_SRC}
-if [ $roms_ver != 'roms_svn' ]; then
-    tar -xf ${METROMS_BASEDIR}/static_libs/${roms_ver}.tar.gz
-    rm -rf User
-else
-#    echo 'no checkout today'
-    svn checkout -r ${svn_rev} https://www.myroms.org/svn/src/trunk .
-fi
+tar -xf ${METROMS_BASEDIR}/static_libs/${roms_ver}.tar.gz
+rm -rf User
 #
 #
 # Set path of the directory containing makefile configuration (*.mk) files.
