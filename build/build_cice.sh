@@ -58,7 +58,7 @@ export MCT_LIBDIR=${METROMS_TMPDIR}/MCT/lib
 # Copy modified source files
 #mkdir -p ${tup}/tmproms/cice
 mkdir -p $CICE_DIR/input_templates/$ROMS_APPLICATION/
-cp -a ${METROMS_BASEDIR}/apps/common/modified_src/$CICEVERSION/* $CICE_DIR
+cp -a ${METROMS_BASEDIR}/build/modified_src/$CICEVERSION/* $CICE_DIR
 cp -av ${METROMS_APPDIR}/$ROMS_APPLICATION/cice_input_grid/* $CICE_DIR/input_templates/$ROMS_APPLICATION/
 # Remove old binaries
 rm -f $CICE_DIR/rundir/cice

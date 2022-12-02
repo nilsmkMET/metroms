@@ -159,7 +159,7 @@ cd ${MY_PROJECT_DIR}
 
 # # NMK - 20151030
 # # Check if we have any common modified source files
-export MODIFIED_SRC_FOLDER=${METROMS_BASEDIR}/apps/common/modified_src/${roms_ver}
+export MODIFIED_SRC_FOLDER=${METROMS_BASEDIR}/build/modified_src/${roms_ver}
 if [ -s $MODIFIED_SRC_FOLDER ]; then
   cd $MODIFIED_SRC_FOLDER
   gotModifiedSourceCOMMON=`ls *.F *.h *.mk *.in`
